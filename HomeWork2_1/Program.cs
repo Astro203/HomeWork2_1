@@ -82,7 +82,7 @@ namespace HomeWork2_1
             Console.Write("Введите балл по русскому языку от 0 до 255: ");          
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreRussianLanguage1 = 0; //Объявление переменной типа double для роста
+            byte ScoreRussianLanguage1 = 0; //Объявление переменной типа byte для балла по русскому языку
             if (ChisInt(str))
             {
                 ScoreRussianLanguage1 = Convert.ToByte(str); 
@@ -93,10 +93,10 @@ namespace HomeWork2_1
             Console.Write("Введите балл по истории: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreHistory1 = 0; //Объявление переменной типа int для балла истории
+            byte ScoreHistory1 = 0; //Объявление переменной типа byte для балла истории
             if (ChisInt(str))
             {
-                ScoreHistory1 = Convert.ToByte(str); //Объявление переменной типа byte для балла истории
+                ScoreHistory1 = Convert.ToByte(str);
             }
             else Console.WriteLine("             Нужно было ввести число от 0 до 255");           
   
@@ -129,10 +129,10 @@ namespace HomeWork2_1
             Console.Write("Введите рост: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            double Height2 = 0; //Объявление переменной типа byte для балла русскому языку
+            double Height2 = 0; //Объявление переменной типа double для роста
             if (ChisDouble(str))
             {
-                Height2 = Convert.ToDouble(str); //Объявление переменной типа double для роста
+                Height2 = Convert.ToDouble(str);
             }
             else Console.WriteLine("             Нужно было ввести число!");
 
@@ -140,7 +140,7 @@ namespace HomeWork2_1
             Console.Write("Введите балл по русскому языку от 0 до 255: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreRussianLanguage2 = 0; //Объявление переменной типа double для роста
+            byte ScoreRussianLanguage2 = 0; //Объявление переменной типа byte для балла по русскому языку
             if (ChisInt(str))
             {
                 ScoreRussianLanguage2 = Convert.ToByte(str);
@@ -151,10 +151,10 @@ namespace HomeWork2_1
             Console.Write("Введите балл по истории: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreHistory2 = 0; //Объявление переменной типа int для балла истории
+            byte ScoreHistory2 = 0; //Объявление переменной типа byte для балла истории
             if (ChisInt(str))
             {
-                ScoreHistory2 = Convert.ToByte(str); //Объявление переменной типа byte для балла истории
+                ScoreHistory2 = Convert.ToByte(str);
             }
             else Console.WriteLine("             Нужно было ввести число от 0 до 255");
 
@@ -187,10 +187,10 @@ namespace HomeWork2_1
             Console.Write("Введите рост: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            double Height3 = 0; //Объявление переменной типа byte для балла русскому языку
+            double Height3 = 0; //Объявление переменной типа double для роста
             if (ChisDouble(str))
             {
-                Height1 = Convert.ToDouble(str); //Объявление переменной типа double для роста
+                Height1 = Convert.ToDouble(str);
             }
             else Console.WriteLine("             Нужно было ввести число!");
 
@@ -198,7 +198,7 @@ namespace HomeWork2_1
             Console.Write("Введите балл по русскому языку от 0 до 255: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreRussianLanguage3 = 0; //Объявление переменной типа double для роста
+            byte ScoreRussianLanguage3 = 0; //Объявление переменной типа byte для балла по русскому языку
             if (ChisInt(str))
             {
                 ScoreRussianLanguage3 = Convert.ToByte(str);
@@ -209,10 +209,10 @@ namespace HomeWork2_1
             Console.Write("Введите балл по истории: ");
             str = Console.ReadLine(); //Ввод с клавиатуры
             //Проверка на принадлежность введенной строки к числам
-            byte ScoreHistory3 = 0; //Объявление переменной типа int для балла истории
+            byte ScoreHistory3 = 0; //Объявление переменной типа byte для балла истории
             if (ChisInt(str))
             {
-                ScoreHistory3 = Convert.ToByte(str); //Объявление переменной типа byte для балла истории
+                ScoreHistory3 = Convert.ToByte(str);
             }
             else Console.WriteLine("             Нужно было ввести число от 0 до 255");
 
@@ -232,21 +232,21 @@ namespace HomeWork2_1
             //Задание 2. Реализация в системе автоматического подсчёта среднего балла по трём предметам, указанным в пункте 1
 
             double AverageScore1 = (ScoreRussianLanguage1 + ScoreHistory1 + ScoreMath1) / 3;
-            Console.WriteLine("Средний балл первого сотрудника: " + Convert.ToString(Math.Round(AverageScore1, 2)));
+            Console.WriteLine("Средний балл первого сотрудника: ", AverageScore1.ToString("#.##"));
 
             double AverageScore2 = (ScoreRussianLanguage2 + ScoreHistory2 + ScoreMath2) / 3;
-            Console.WriteLine("Средний балл второго сотрудника: " + Convert.ToString(Math.Round(AverageScore2, 2)));
+            Console.WriteLine("Средний балл второго сотрудника: ", AverageScore2.ToString("#:##"));
 
             double AverageScore3 = (ScoreRussianLanguage3 + ScoreHistory3 + ScoreMath3) / 3;
-            Console.WriteLine("Средний балл третьего сотрудника: " + Convert.ToString(Math.Round(AverageScore3, 2)));
+            Console.WriteLine("Средний балл третьего сотрудника: ", AverageScore3.ToString("#:##"));
             Console.WriteLine();
 
             //Задание 3. Реализация возможности вывода информации на консоли
-            Console.WriteLine(Convert.ToString(Math.Round(AverageScore1,2))); //Обычный вывод для первого сотрудника
+            Console.WriteLine(AverageScore1.ToString("#:##")); //Обычный вывод для первого сотрудника
 
-            Console.WriteLine("Средний балл второго сотрудника: " + Convert.ToString(Math.Round(AverageScore2,2))); //Форматированный вывод для второго сотрудника
+            Console.WriteLine("Средний балл второго сотрудника: {0}", AverageScore2.ToString("#:##")); //Форматированный вывод для второго сотрудника
 
-            Console.WriteLine($"Средний балл третьего сотрудника: {Math.Round(AverageScore3,2)}"); //Интерполяция строк для третьего сотрудника
+            Console.WriteLine($"Средний балл третьего сотрудника: {AverageScore3:#.##}"); //Интерполяция строк для третьего сотрудника
 
             //Задание 4.Комментирование кода с использованием обычных или XML-комментариев
 
